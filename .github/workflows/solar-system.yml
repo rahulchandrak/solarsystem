@@ -19,8 +19,8 @@ jobs:
                 exclude:
                     - nodejs_version: 18
                       os: macos-latest
-                      
-        runs-on: ubuntu-latest
+
+        runs-on: ${{ matrix.os }}
         steps:
         - name: Checkout Repo
           uses: actions/checkout@v4
