@@ -25,10 +25,10 @@ jobs:
         - name: Checkout Repo
           uses: actions/checkout@v4
         
-        - name: Setup Nodejs
+        - name: Setup Nodejs - ${{ matrix.nodejs_version}}
           uses: actions/setup-node@v3
           with:
-            node-version: 18
+            node-version: ${{ matrix.nodejs_version}}
 
         - name: install dependencies
           run: npm install
